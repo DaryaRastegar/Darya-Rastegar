@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+.container button {
+  width: 132px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #55A3F0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.container button:hover{
+transform: scale(0.98);
+}
+.container button:focus{
+  outline: none;
+}
+.container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container span{
+    color: #282828;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 37.5px;
+    margin-right: 5px;
+
+}
+.managment{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #282828;
+    border-radius: 3px;
+}

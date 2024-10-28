@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.container p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid #8D8D8D80;
+    border-radius: 50%;
+    color: #8D8D8D80;
+    background-color: transparent;
+    cursor: pointer;
+}
+.container button{
+    color: #8d8d8d80;
+}
+.container button:focus {
+    outline: none;
+}
+.container button:hover {
+    outline: none;
+}
+.container button:disabled{
+    opacity: 0.3;
+}
+.container p:last-child{
+    border: none;
+    width: fit-content;
+    height: fit-content;
+}
+.icon{
+    width: 35px;
+    height: 35px;
+}
+.container .selected{
+    background-color: #55A3F0;
+    color: #FFF;
+}

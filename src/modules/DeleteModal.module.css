@@ -1,0 +1,61 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #3333337d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete_container {
+  width: 472px;
+  height: 338px;
+  border-radius: 30px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete_container div {
+  width: 100%;
+}
+.delete_container div img {
+  width: 96px;
+  height: 97.83px;
+  margin-bottom: 60px;
+}
+.delete_container div p {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31.25px;
+  color: #282828;
+  margin-bottom: 30px;
+}
+.delete_container div button{
+width: 160px;
+height: 41px;
+border-radius: 10px;
+padding: 10px;
+transition: all 0.3s ease-in-out;
+border: none;
+}
+.delete_container div button:focus{
+    outline: none;
+}
+.delete_container div button:hover{
+    transform: scale(0.98);
+}
+
+.delete_container div button:last-child{
+    background-color: #F43F5E;
+    color: #fff;
+}
+.cancel{
+    background-color:#DFDFDF;
+    color: #282828;
+    margin-right: 10px;
+}
