@@ -26,9 +26,12 @@ function ProductsPage() {
     price:""
   })
 
-  
   const {isLoading, data, error,isPlaceholderData, refetch}= useGetProducts(page,search)
 
+  const checkPageStatus = () => {
+    const count = data?.data?.data?.length;
+    if(page > 1 && count === 1) setPage(prev => prev - 1);
+  }
 
   if(isLoading) return <p>....loading </p>
 
@@ -49,7 +52,13 @@ function ProductsPage() {
       setEditForm={setEditForm}
     />
     {!!addModule && (<AddModale setAddModule={setAddModule}/>)}
-    {!!isShow && (<DeleteModal setIsShow={setIsShow} id={id}/>)}
+    {!!isShow && (
+      <DeleteModal
+        setIsShow={setIsShow}
+        id={id}
+        checkPageStatus={checkPageStatus}
+      />
+    )}
     {!!isDisplay && (<EditModal setIsDisplay={setIsDisplay} editForm={editForm}/>)}
     <PaginationPage
       page={page}

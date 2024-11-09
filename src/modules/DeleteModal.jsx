@@ -5,7 +5,7 @@ import styles from "./DeleteModal.module.css";
 import { useNavigate } from "react-router-dom";
 import { removeCookie } from "../utils/cookie";
 
-function DeleteModal({setIsShow,id}) {
+function DeleteModal({setIsShow, id, checkPageStatus}) {
   const navigate = useNavigate();
     const { mutate } = useDeleteProduct();
     const queryClient = useQueryClient();
@@ -16,9 +16,12 @@ function DeleteModal({setIsShow,id}) {
     mutate(id, {
         onSuccess: (data) => {
           console.log(data)
-          queryClient.invalidateQueries({
-            queryKey: ["products"],
-          });
+          checkPageStatus();
+          setTimeout(() => {
+            queryClient.invalidateQueries({
+              queryKey: ["products"],
+            });
+          }, 100);
           setIsShow(false);
         },
         onError: (err) => {
